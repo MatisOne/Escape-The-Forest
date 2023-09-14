@@ -26,4 +26,14 @@ public class MenuController : MonoBehaviour
         CharacterController controller = GetComponent<CharacterController>();
         controller.transform.position = new Vector3(0f, 0f, 0f);
     }
+
+    public void TPtoSuccess()
+    {
+        SceneManager.LoadScene("Success");
+    }
+
+    public void TPtoDeath()
+    {
+        SceneManager.LoadScene("Death");
+    }
 }
