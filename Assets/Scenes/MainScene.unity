@@ -15,7 +15,7 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 1
-  m_FogColor: {r: 0.19215688, g: 0.15294118, b: 0.15686275, a: 1}
+  m_FogColor: {r: 0.15686275, g: 0, b: 0.03529412, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.02
   m_LinearFogStart: 0
@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 087ed49bac368d44b8e6799685fe9a86, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 00d61f6ab76f8c8449ef9657a7e808c9, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 410087040}
-  m_IndirectSpecularColor: {r: 0.03068585, g: 0.026719775, b: 0.026810212, a: 1}
+  m_IndirectSpecularColor: {r: 0.017049097, g: 0.003759595, b: 0.0064722328, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1584,7 +1584,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 2564dc55434e6d545a825a798114a6be, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.28
-  m_Pitch: 0.91
+  m_Pitch: 1.15
   Loop: 1
   Mute: 0
   Spatialize: 0
@@ -1735,7 +1735,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 12.2
-  MaxDistance: 64.8
+  MaxDistance: 87
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
@@ -1745,8 +1745,8 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0.1882716
-      value: 1
+      time: 0.22418316
+      value: 0.9959259
       inSlope: -5.3135996
       outSlope: -5.3135996
       tangentMode: 0
@@ -1754,23 +1754,23 @@ AudioSource:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.3765432
-      value: 0.5
-      inSlope: -1.3283999
-      outSlope: -1.3283999
+      time: 0.37930503
+      value: 0.47962952
+      inSlope: -2.0044396
+      outSlope: -2.0044396
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.5630946
       outWeight: 0
     - serializedVersion: 3
-      time: 0.7530864
-      value: 0.25
-      inSlope: -0.33209997
-      outSlope: -0.33209997
+      time: 0.60391647
+      value: 0.1318512
+      inSlope: -0.7667367
+      outSlope: -0.7667367
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
-      outWeight: 0
+      inWeight: 0.4557993
+      outWeight: 0.34690052
     - serializedVersion: 3
       time: 0.9732666
       value: 0
@@ -2441,7 +2441,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0.7
+      value: 0.6
       inSlope: 0
       outSlope: 0
       tangentMode: 0
