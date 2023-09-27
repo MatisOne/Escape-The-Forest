@@ -959,7 +959,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 0.8820755, g: 0.9698542, b: 1, a: 1}
-  m_Intensity: 0.45
+  m_Intensity: 0.4
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1004,7 +1004,7 @@ Light:
   m_BounceIntensity: 2
   m_ColorTemperature: 5000
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: -3.097857e-27, z: 1.02e-43, w: 1e-45}
+  m_BoundingSphereOverride: {x: 0, y: 6e-44, z: 1.8e-44, w: 1.4613e-41}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -3076,6 +3076,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Electric Torch HighPoly
       objectReference: {fileID: 0}
+    - target: {fileID: 2695777482564835125, guid: f63e65675a6e1494f940b88d554ba138,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3001713505705433743, guid: f63e65675a6e1494f940b88d554ba138,
         type: 3}
       propertyPath: m_Mesh
@@ -3089,8 +3094,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3001713506112187437, guid: f63e65675a6e1494f940b88d554ba138,
         type: 3}
+      propertyPath: m_Range
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3001713506112187437, guid: f63e65675a6e1494f940b88d554ba138,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3001713506112187437, guid: f63e65675a6e1494f940b88d554ba138,
+        type: 3}
       propertyPath: m_Intensity
-      value: 10
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 3001713506112187440, guid: f63e65675a6e1494f940b88d554ba138,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3001713506112187442, guid: f63e65675a6e1494f940b88d554ba138,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3001713506112187442, guid: f63e65675a6e1494f940b88d554ba138,
         type: 3}
@@ -3100,7 +3125,7 @@ PrefabInstance:
     - target: {fileID: 3001713506112187442, guid: f63e65675a6e1494f940b88d554ba138,
         type: 3}
       propertyPath: onOffLightKey
-      value: OVRInput.Button.One
+      value: F
       objectReference: {fileID: 0}
     - target: {fileID: 3324364588802526607, guid: f63e65675a6e1494f940b88d554ba138,
         type: 3}
@@ -3110,17 +3135,17 @@ PrefabInstance:
     - target: {fileID: 3324364588802526607, guid: f63e65675a6e1494f940b88d554ba138,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.25067475
+      value: 0.12
       objectReference: {fileID: 0}
     - target: {fileID: 3324364588802526607, guid: f63e65675a6e1494f940b88d554ba138,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.6339687
+      value: 1.624
       objectReference: {fileID: 0}
     - target: {fileID: 3324364588802526607, guid: f63e65675a6e1494f940b88d554ba138,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.1
+      value: 0.032
       objectReference: {fileID: 0}
     - target: {fileID: 3324364588802526607, guid: f63e65675a6e1494f940b88d554ba138,
         type: 3}
@@ -3157,10 +3182,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0.151
       objectReference: {fileID: 0}
+    - target: {fileID: 4376499010767969945, guid: f63e65675a6e1494f940b88d554ba138,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4584702581589827849, guid: f63e65675a6e1494f940b88d554ba138,
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6405412478018482156, guid: f63e65675a6e1494f940b88d554ba138,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3178,6 +3213,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1172611088}
+    - targetCorrespondingSourceObject: {fileID: 3001713506112187440, guid: f63e65675a6e1494f940b88d554ba138,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1172611095}
   m_SourcePrefab: {fileID: 100100000, guid: f63e65675a6e1494f940b88d554ba138, type: 3}
 --- !u!1 &1172611084 stripped
 GameObject:
@@ -3246,7 +3285,19 @@ MonoBehaviour:
       m_Calls: []
   m_Activated:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1172611095}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: ToggleLight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_Deactivated:
     m_PersistentCalls:
       m_Calls: []
@@ -3376,6 +3427,20 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!114 &1172611095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1172611085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c3f480f439539c458e58adb618d96e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  light: {fileID: 0}
+  isOn: 0
 --- !u!1 &1178266414
 GameObject:
   m_ObjectHideFlags: 0
@@ -4505,7 +4570,7 @@ PrefabInstance:
     - target: {fileID: 1206186470510718099, guid: 7f5dfbc27e25ff140b824193ed3c7b4c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.251
+      value: 0.13
       objectReference: {fileID: 0}
     - target: {fileID: 1206186470510718099, guid: 7f5dfbc27e25ff140b824193ed3c7b4c,
         type: 3}
@@ -4515,7 +4580,7 @@ PrefabInstance:
     - target: {fileID: 1206186470510718099, guid: 7f5dfbc27e25ff140b824193ed3c7b4c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.1
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 1206186470510718100, guid: 7f5dfbc27e25ff140b824193ed3c7b4c,
         type: 3}
