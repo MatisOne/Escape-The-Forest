@@ -8,7 +8,17 @@ public class youdied : MonoBehaviour
 {
     public string deathReason = "undefinied";
 
-    void OnTriggerEnter(Collider other){
+    void OnTriggerEnter(Collider collider){
+        if (collider.transform.CompareTag("Player")){
+            StartCoroutine(die());
+        }
+    }
+
+    IEnumerator die(){
+        if(deathReason == "landmine"){
+            Debug.Log("waiting fo landmine to explode");
+            yield return new WaitForSeconds(4);
+        }
         SceneManager.LoadScene("Death");
         Debug.Log("Player died");
         AnalyticsService.Instance.CustomData("PlayerDied", new Dictionary<string, object>
