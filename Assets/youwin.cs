@@ -8,9 +8,9 @@ public class youwin : MonoBehaviour
 {
     void OnTriggerEnter(Collider other){
         SceneManager.LoadScene("Success");
-        AnalyticsService.Instance.CustomData("PlayerWin", new Dictionary<string, object>
-        {
-            {"timeFromStartFloat", Time.timeSinceLevelLoad}
-        });
+        Unity.Services.Analytics.CustomEvent PlayerWin = new Unity.Services.Analytics.CustomEvent("PlayerWin");
+        PlayerWin.Add("timeFromStartFloat", Time.timeSinceLevelLoad);
+        AnalyticsService.Instance.RecordEvent(PlayerWin);
+        
     }
 }

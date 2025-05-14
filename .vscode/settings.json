@@ -56,5 +56,6 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Escape The Forest.sln"
+    "dotnet.defaultSolution": "Escape The Forest.sln",
+    "CodeGPT.apiKey": "OpenAI"
 }

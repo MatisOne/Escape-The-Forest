@@ -21,14 +21,19 @@ public class youdied : MonoBehaviour
         }
         SceneManager.LoadScene("Death");
         Debug.Log("Player died");
-        AnalyticsService.Instance.CustomData("PlayerDied", new Dictionary<string, object>
-        {
-            {"timeFromStartFloat", Time.timeSinceLevelLoad},
-            {"positionCurrent", GameObject.Find("XR Origin").transform.position.ToString("F3")},
-            {"deathReason", deathReason}
-        });
+        Unity.Services.Analytics.CustomEvent PlayerDied = new Unity.Services.Analytics.CustomEvent("PlayerDied");
+        
+            PlayerDied.Add("timeFromStartFloat", Time.timeSinceLevelLoad);
+            PlayerDied.Add("positionCurrent", GameObject.Find("XR Origin").transform.position.ToString("F3"));
+            PlayerDied.Add("howFarFromCenterFloat", Vector3.Distance(GameObject.Find("XR Origin").transform.position, Vector3.zero));
+            PlayerDied.Add("deathReason", deathReason);
+        
+
+        // Wysyłanie zdarzenia z parametrami
+        AnalyticsService.Instance.RecordEvent(PlayerDied);
         Debug.Log("timeFromStart: " + Time.timeSinceLevelLoad);
         Debug.Log("positionCurrent: " + GameObject.Find("XR Origin").transform.position);
+        Debug.Log("howFarFromCenterFloat: " + Vector3.Distance(GameObject.Find("XR Origin").transform.position, Vector3.zero));
         Debug.Log("deathReason: " + deathReason);
     }
 }
